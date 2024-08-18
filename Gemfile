@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.6.10'
+ruby '2.7.0'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
@@ -46,12 +46,14 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
   gem 'rspec-rails', '~> 3.6'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails', '~> 6.2.0'
   gem 'rails-controller-testing'
   gem 'headless'
   gem 'capybara'
   gem 'poltergeist'
   gem 'database_cleaner'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
 end
 
 group :development do
